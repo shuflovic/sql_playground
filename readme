@@ -1,0 +1,41 @@
+# SQL Playground
+
+A simple, offline SQL training app built with Python and Tkinter.  
+Perfect for practicing SQL queries on your local Microsoft SQL Server database without needing the internet or complex tools.
+
+## Features
+
+- **Clean GUI**: Write SQL queries on the left, see nicely formatted results below.
+- **Permanent Snippets Panel**: Favorite queries always visible on the right side. Click to load instantly.
+- **Save Current Query as Snippet**: One-click save with overwrite protection.
+- **Multiple Result Sets**: Run several SELECT statements at once — each table displays separately with headers.
+- **Beautiful Table Formatting**: Aligned columns, clear separators, NULL handling.
+- **Fully Offline**: Everything runs locally — no cloud dependencies.
+- **Persistent Snippets**: Saved automatically to `snippets.json` in the project folder.
+- **Git Ready**: Easy to version-control your progress (see below).
+
+## Requirements
+
+- Python 3.7+
+- Microsoft SQL Server (tested with SQL Server 2025 Express)
+- pyodbc: `pip install pyodbc`
+
+## Setup
+
+1. **Place the file**  
+   Save `sql_gui.py` in a folder of your choice.
+
+2. **Edit the connection string** (if needed)  
+   Inside `sql_gui.py`, look for the `conn_str` section around line ~90.  
+   It should already work if you're using:
+   - SQL Server Express named instance (`localhost\\SQLEXPRESS`)
+   - Windows Authentication  
+   If you use SQL login or a different server name, adjust accordingly.
+
+3. **Create a test database** (optional but recommended)  
+   In SSMS or your app:
+   ```sql
+   CREATE DATABASE test;
+   GO
+   USE test;
+   -- Add your tables, e.g., flights, workaway_projects, etc.
