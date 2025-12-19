@@ -8,10 +8,6 @@
         "sql": "select*from flights"
     },
     {
-        "name": "top 20 flights",
-        "sql": "SELECT TOP 20 * FROM flights"
-    },
-    {
         "name": "add a row to workaway",
         "sql": "insert into workaway_projects (country,location,nights,name)\nvalues ('peru','yuihau','14','alvaro')"
     },
@@ -26,5 +22,13 @@
     {
         "name": "country by nights",
         "sql": "select sum(nights/person*2),country from data\ngroup by country\norder by sum(nights/person*2) desc"
+    },
+    {
+        "name": "create procedure get all flights",
+        "sql": "create procedure getallflights\nas\nbegin\nselect*from flights\nend"
+    },
+    {
+        "name": "get all flights P",
+        "sql": "getallflights"
     }
 ]
