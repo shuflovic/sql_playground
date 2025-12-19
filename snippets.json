@@ -1,0 +1,30 @@
+[
+    {
+        "name": "select all ( data)",
+        "sql": "select*from data"
+    },
+    {
+        "name": "select all (flights)",
+        "sql": "select*from flights"
+    },
+    {
+        "name": "top 20 flights",
+        "sql": "SELECT TOP 20 * FROM flights"
+    },
+    {
+        "name": "add a row to workaway",
+        "sql": "insert into workaway_projects (country,location,nights,name)\nvalues ('peru','yuihau','14','alvaro')"
+    },
+    {
+        "name": "select all (workaway)",
+        "sql": "select*from workaway_projects"
+    },
+    {
+        "name": "sum price in flights",
+        "sql": "select sum(price)from flights"
+    },
+    {
+        "name": "country by nights",
+        "sql": "select sum(nights/person*2),country from data\ngroup by country\norder by sum(nights/person*2) desc"
+    }
+]
